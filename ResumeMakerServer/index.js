@@ -1,38 +1,69 @@
 const express = require('express');
-const { constants } = require('fs/promises');
-const fs = require('fs');
-const port = process.env.PORT || 5000;
-const { generatePDF } = require('./generatePDF');
 const path = require('path');
 const { DataToJson } = require('./DataToJson');
-const app = express()
+const fs = require('fs');
+const { generatePDF } = require('./generatePDF');
+const multer = require('multer');
 
+const app = express();
+
+const port = process.env.PORT || 5000;
+
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
 
+// Serve static files
+app.use(express.static(path.join(__dirname, '../ResumeMakerApp')));
+app.use('/uploads', express.static(path.join(__dirname, 'ResumeTemplates')));
+app.use(express.static(__dirname));
+
+// Dynamic template routes
 const templateRoutes = ['template1', 'template2', 'template3'];
 let myNumber = 1;
+let newNumber = templateRoutes.length + 1;
+const newTemplateName = `template${newNumber}`;
+const insertIndex = newNumber - 1;
+templateRoutes.splice(insertIndex, 0, newTemplateName);
 
-console.log(process.cwd())
-console.log(path.join(__dirname, '../ResumeMakerApp/Images'))
+// Function to handle file upload
+const uploadDocHandler = (req, res) => {
+  const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, path.join(__dirname, 'ResumeTemplates')); // Set the destination folder for uploaded files
+    },
+    filename: (req, file, cb) => {
+      cb(null, newTemplateName); // Set the file name as "Template1"
+    },
+  });
 
-app.use(express.static(path.join(__dirname, '../ResumeMakerApp')));
+  const upload = multer({ storage: storage });
 
+  upload.single('file')(req, res, (err) => {
+    if (err) {
+      console.error('Error uploading file:', err);
+      res.sendStatus(500);
+    } else {
+      res.send('File uploaded successfully');
+    }
+  });
+};
+
+// Template route handler
 const templateRouteHandler = (templateNumber) => (req, res) => {
   myNumber = templateNumber;
   res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'Resume.html'));
 };
 
-// Create routes dynamically
+// Create routes dynamically for templates
 templateRoutes.forEach((template, index) => {
   app.get(`/${template}`, templateRouteHandler(index + 1));
 });
 
+// File upload route
+app.post('/uploadDoc', uploadDocHandler);
 
-
-
-
+// File download route
 app.get('/download', (req, res) => {
   const resumePath = path.join(__dirname, 'generatedResume.pdf');
 
@@ -48,22 +79,22 @@ app.get('/download', (req, res) => {
   }
 });
 
+// Start route
 app.get('/Start', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'Start.html'))
-})
+  res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'Start.html'));
+});
 
+// Resume route
 app.get('/Resume', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'Resume.html'))
-})
+  res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'Resume.html'));
+});
 
+// Form route
 app.get('/form', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'Resume.html'));
-})
+});
 
-const num = 1;
-
-
-
+// Form submission route
 app.post('/form', (req, res) => {
   const formData = req.body;
   console.log(formData);
@@ -80,11 +111,8 @@ app.post('/form', (req, res) => {
       generatePDF('./data.json', myNumber)
         .then(() => {
           console.log('PDF generated successfully');
-
-
           res.sendFile(path.join(__dirname, '..', 'resumemakerapp', 'output.html'));
         })
-
         .catch(error => {
           console.error('Error generating PDF:', error);
           res.sendStatus(500);
@@ -93,12 +121,7 @@ app.post('/form', (req, res) => {
   });
 });
 
+// Start the server
 app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}/Start`)
-})
-
-//Set the names 
-//Error Handling Template not Found
-//Api didn't work
-//Input mein kuch missing ya galat
-//
+  console.log(`Resume Maker listening on http://localhost:${port}/Start`);
+});
