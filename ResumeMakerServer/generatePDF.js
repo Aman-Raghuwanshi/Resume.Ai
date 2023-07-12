@@ -9,6 +9,7 @@ function generatePDF(jsonFilePath, myNumber) {
 
   const INPUT = `./ResumeTemplates/Template${myNumber}.docx`;
 
+  // Load the JSON data from the file
   const JSON_INPUT = require('./data.json');
 
 
@@ -52,4 +53,5 @@ function generatePDF(jsonFilePath, myNumber) {
 
 }
 
+// Export the function
 module.exports = { generatePDF };
