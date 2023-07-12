@@ -8,7 +8,7 @@ Welcome to Resume.Ai, a cutting-edge resume builder that empowers individuals to
 
 ## Folders
 
-![folders](Layout/)
+![folders](Layout/11.jpg)
 
 ## Features
 
