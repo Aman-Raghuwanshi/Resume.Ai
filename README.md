@@ -42,8 +42,11 @@ Now, you will need to fill out the form
 You can dynamically add multiple elements in the same field by clicking the "+" sign
 
 ![7](https://iili.io/HsDmKSn.png)
+
 ![8](https://iili.io/HsDmq9s.png)
+
 ![9](https://iili.io/HsDmBAG.png)
+
 ![10](https://iili.io/HsDmdPI.png)
 
 By clicking the download button, you can easily download the PDF file
