@@ -15,8 +15,8 @@ function generatePDF(jsonFilePath, myNumber) {
   // Set up our credentials object.
   const credentials = PDFServicesSdk.Credentials
     .servicePrincipalCredentialsBuilder()
-    .withClientId("6e593706f45f4d2fa68faa9bbe632428")
-    .withClientSecret("p8e-0dHpU7N6msagNVf5nhhn6SDVfUTTGqrl")
+    .withClientId("")
+    .withClientSecret("")
     .build();
 
   // Create an ExecutionContext using credentials
