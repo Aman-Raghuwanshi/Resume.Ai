@@ -47,7 +47,7 @@ To run the Resume.Ai web application, please follow these steps:
 
 ## Contact
 
-If you have any questions or need assistance with Reshack, please feel free to contact Navin Patwari at amanraghu1c222@gmail.com.
+If you have any questions or need assistance with Resume.Ai, please feel free to contact Aman Raghuwanshi at amanraghu1c222@gmail.com.
 
 This project was developed as part of the Adobe Papyrus Nebule Hackathon by Aman Raghuwanshi.
 
