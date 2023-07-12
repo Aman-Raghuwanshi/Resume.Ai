@@ -10,28 +10,43 @@ Welcome to Resume.Ai, a cutting-edge resume builder that empowers individuals to
 
 
 ![folders](https://iili.io/HsDmCNf.jpg)
+
 This is the Folder Structure
 
 
 ## Features
 
 ![1](https://iili.io/HsDmHnp.png)
-![2](https://iili.io/HsDbytR.png)
-You can select a template to proceed
-![3](https://iili.io/HsDmJMN.png)
-You can come to Git Repo by clicking the button
-![4](https://iili.io/HsDbpwv.png)
-You can upload a new template with two files one Doc and other the image of that template
-![5](https://iili.io/HsDm3Ft.png)
-Now will have to Fill the form
-![6](https://iili.io/HsDmFcX.png)
-You can add any number of elements by clicking the + sign
-![7](https://iili.io/HsDmKSn.png)
 
+Entry Page
+
+![2](https://iili.io/HsDbytR.png)
+
+You can select a template to proceed
+
+![3](https://iili.io/HsDmJMN.png)
+
+You can come to This Git Repo by clicking the button
+
+![4](https://iili.io/HsDbpwv.png)
+
+You can upload a new template with two files: one for the document (Doc) and the other for the template image
+
+![5](https://iili.io/HsDm3Ft.png)
+
+Now, you will need to fill out the form
+
+![6](https://iili.io/HsDmFcX.png)
+
+
+You can dynamically add multiple elements in the same field by clicking the "+" sign
+
+![7](https://iili.io/HsDmKSn.png)
 ![8](https://iili.io/HsDmq9s.png)
 ![9](https://iili.io/HsDmBAG.png)
 ![10](https://iili.io/HsDmdPI.png)
-Clicking the download Button uou can download the pdf
+
+By clicking the download button, you can easily download the PDF file
 
 
 ## Prerequisites
@@ -43,31 +58,26 @@ you can update ResumeMakerServer/pdfservices-api-credentials.json and in the Res
 
 To run the Resume.Ai web application, please follow these steps:
 
-1. Install the package-JSON for the API and client components. You can do this by executing the following command in your terminal:
-
-   ```bash
+1. Open your terminal and navigate to the ResumeMakerServer directory. Install the required dependencies by running the following commands:
+    ```bash
+    cd ResumeMakerServer
    npm install
-   ```
+   ````
 
-2. After installing the package-JSON open the terminal, navigate to the ResumeMakerServer directory and start the API server:
+2. After successfully installing the dependencies, start the ResumeMaker server using the following command:
 
    ```bash
-   cd ResumeMakerServer
    npm start dev
    ```
 
-3. Once both the API servers are running, you can access the Resume.Ai through your web browser at ```http://localhost:5000/Start```
+3. Once the server is running, you can access Resume.Ai through your web browser by visiting```http://localhost:5000/Start```
 
 
-
-
-## License
-
-(MIT)
-
-## Contact
+## Contact Information
 
 If you have any questions or need assistance with Resume.Ai, please feel free to contact Aman Raghuwanshi at amanraghu1c222@gmail.com.
+
+## Acknowledgments
 
 This project was developed as part of the Adobe Papyrus Nebule Hackathon by Aman Raghuwanshi.
 
