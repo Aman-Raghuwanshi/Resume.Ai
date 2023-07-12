@@ -8,7 +8,7 @@ Welcome to Resume.Ai, a cutting-edge resume builder that empowers individuals to
 
 ## Folders
 
-![folders](https://github.com/Aman-Raghuwanshi/Resume.Ai/blob/main/Layout/4cdb31d5-98c6-49bf-90cb-81e1ede58888%20(1).jpg)
+![folders](Layout/)
 
 ## Features
 
@@ -27,16 +27,14 @@ To run the Resume.Ai web application, please follow these steps:
    npm install
    ```
 
-2. After installing the package-JSON.
-
-4. In the terminal, navigate to the ResumeMakerServer directory and start the API server:
+2. After installing the package-JSON open the terminal, navigate to the ResumeMakerServer directory and start the API server:
 
    ```bash
    cd ResumeMakerServer
    npm start dev
    ```
 
-5. Once both the API servers are running, you can access the Resume.Ai through your web browser at ```localhost:5000/Start```
+3. Once both the API servers are running, you can access the Resume.Ai through your web browser at ```http://localhost:5000/Start```
 
 
 
