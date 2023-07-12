@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resume.Ai</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Images/css/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-white">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="brand-and-toggler">
+                    <a href="Start.html" class="navbar-brand">
+                        <img src="Images/curriculum-vitae.png" alt="" class="navbar-brand-icon">
+                        <span class="navbar-brand-text">Resume <span>.Ai</span>
+                    </a>
+                    <button type="button" class="navbar-toggler-btn">
+                        <div class="bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row-2">
+        <div class="text-center mt-4" style="padding: 0px;">
+          <form action="/uploadDoc" method="post" enctype="multipart/form-data" class="btn btn-primary text-uppercase" onsubmit="uploadDoc(event)">
+            <!-- File input field -->
+            <input type="file" name="file">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary text-uppercase">Upload Template Doc</button>
+          </form>
+        </div>
+        <div class="text-center mt-4" style="padding: 0px;">
+          <form action="/uploadImg" method="post" enctype="multipart/form-data" class="btn btn-primary text-uppercase">
+            <!-- File input field -->
+            <input type="file" name="file">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary text-uppercase">Upload Template Image</button>
+          </form>
+        </div>
+      </div>
+    <script src="Images/upload.js"></script>
+
+      
+</body>
+
+</html>
