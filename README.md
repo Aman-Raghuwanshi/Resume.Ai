@@ -8,9 +8,31 @@ Welcome to Resume.Ai, a cutting-edge resume builder that empowers individuals to
 
 ## Folders
 
-![folders](Layout/11.jpg)
+
+![folders](https://iili.io/HsDmCNf.jpg)
+This is the Folder Structure
+
 
 ## Features
+
+![1](https://iili.io/HsDmHnp.png)
+![2](https://iili.io/HsDbytR.png)
+You can select a template to proceed
+![3](https://iili.io/HsDmJMN.png)
+You can come to Git Repo by clicking the button
+![4](https://iili.io/HsDbpwv.png)
+You can upload a new template with two files one Doc and other the image of that template
+![5](https://iili.io/HsDm3Ft.png)
+Now will have to Fill the form
+![6](https://iili.io/HsDmFcX.png)
+You can add any number of elements by clicking the + sign
+![7](https://iili.io/HsDmKSn.png)
+
+![8](https://iili.io/HsDmq9s.png)
+![9](https://iili.io/HsDmBAG.png)
+![10](https://iili.io/HsDmdPI.png)
+Clicking the download Button uou can download the pdf
+
 
 ## Prerequisites
 
